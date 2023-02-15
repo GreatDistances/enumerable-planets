@@ -11,12 +11,16 @@
 <h1>Pick a planet:</h1>
 <div class="form-group">
     <label>
-        <ol>
-            <li th:each="planet : ${planets}"
-                    th:value="${planet}"
-                    th:text="${planet.displayName}">
-            </li>
-        </ol>
+        <table class="table table-dark" th:block th:each="planet : ${planets}">
+            <thead>
+            <tr>
+                <th th:text="${planet.displayName}"></th>
+            </tr>
+            </thead>
+            <tr>
+                <th th:text="|${planet.yearLength} days in one earth year|"></th>
+            </tr>
+        </table>
     </label>
 </div>
 
