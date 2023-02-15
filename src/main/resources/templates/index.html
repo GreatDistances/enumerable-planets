@@ -9,6 +9,16 @@
 </head>
 <body>
 <h1>Pick a planet:</h1>
+<div class="form-group">
+    <label>
+        <ol>
+            <li th:each="planet : ${planets}"
+                    th:value="${planet}"
+                    th:text="${planet.displayName}">
+            </li>
+        </ol>
+    </label>
+</div>
 
 </body>
 </html>
